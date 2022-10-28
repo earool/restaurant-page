@@ -82,5 +82,47 @@ body {
 /* main */
 
 .main {
+    flex: 1;
     display: grid;
+    grid-template-columns: 1fr max(400px, 30%);
+    gap: 3%;
 }
+
+.main * {
+    margin: var(--margin) 0px;
+}
+
+.text {
+    text-indent: 1rem;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.text * {
+    margin: var(--margin);
+}
+
+.text h3 {
+    text-align: center;
+}
+
+.hours h3 {
+    text-align: center;
+}
+
+.hours > * {
+    margin: var(--margin);
+    line-height: 1.5rem;
+    width: 100%;
+}
+
+tr th:first-child {
+    width: max(200px, 50%);
+    text-align: left;
+    padding-left: var(--margin);
+}
+
+tr th:last-child {
+    text-align: center;
+}
+
