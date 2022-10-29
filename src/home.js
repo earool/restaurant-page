@@ -1,7 +1,11 @@
-export default function loadHomePage() {
+export function getContent() {
     const content = document.querySelector('#content');
     content.classList.add('content');
+    return content;
+}
 
+
+export function loadHeader() {
     // header
     const header = document.createElement('header');
     header.classList.add('header', 'container',
@@ -20,16 +24,20 @@ export default function loadHomePage() {
         const tabs = ['Home', 'Menu', 'Contact']
         const tab = document.createElement('div');
         tab.classList.add('tab');
+        tab.setAttribute('data-tab', tabs[i]);
         tab.innerText = tabs[i];
         tabContainer.appendChild(tab);
     }
+}
 
-    // main
-
+export function loadMainContainer() {
     const main = document.createElement('main');
     main.classList.add('container-size', 'main');
     content.appendChild(main);
-    
+    return main;
+}
+
+export function loadMainHome(main) {
     // submain - text
     const aboutMe = document.createElement('div');
     aboutMe.classList.add('container', 'round-corners', 'text')
@@ -72,7 +80,4 @@ export default function loadHomePage() {
         }
     }
     hours.appendChild(hoursTable);
-
-
- 
 }
