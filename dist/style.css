@@ -36,15 +36,16 @@ body {
     background-color: black;
 }
 
-.content {
+#content {
     background: url('./img/background-image.jpg');
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-position: 0% 0%;
 
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -126,3 +127,35 @@ tr th:last-child {
     text-align: center;
 }
 
+/* menu main */
+
+.menu-main {
+
+    /* some stuff */
+    margin: 0px 0px auto 0px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 196px);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--margin);
+    padding: var(--margin);
+    justify-content: center;
+
+}
+
+.img-div {
+    width: 196px;
+    height: 300px;
+    color: white;
+    text-align: center;
+    border: white 3px solid;
+}
+
+.img-div img {
+    width: 190px;
+    height: 250px;
+    object-fit: cover;
+}

@@ -1,9 +1,5 @@
-export function getContent() {
-    const content = document.querySelector('#content');
-    content.classList.add('content');
-    return content;
-}
-
+const content = document.querySelector('#content');
+content.classList.add('content');
 
 export function loadHeader() {
     // header
@@ -39,6 +35,8 @@ export function loadMainContainer() {
 
 export function loadMainHome(main) {
     // submain - text
+    main.classList.remove('menu-main');
+    main.classList.add('main')
     const aboutMe = document.createElement('div');
     aboutMe.classList.add('container', 'round-corners', 'text')
     main.appendChild(aboutMe);
